@@ -1,0 +1,22 @@
+public boolean isPalindrome(String s) {
+        String A = s.toLowerCase();
+        int count = 0;
+        boolean isfalse = true;
+        char B[] = new char[A.length()];
+        for(int i = 0;i<A.length();){
+            if(!Character.isLetter(A.charAt(i))){
+                i++;
+            }else{
+                B[count] = A.charAt(i);
+                count++;
+                i++;
+            }
+        }
+        for(int i = 0;i<B.length;i++){
+            int j = B.length-count;
+            if(B[i]==B[j]){
+                isfalse = true;
+            }
+        }
+        return false;
+    }
