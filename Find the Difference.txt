@@ -1,0 +1,9 @@
+ public char findTheDifference(String s, String t) {
+        int d = 0;
+        for (int i = 0; i < s.length(); i++) {
+            d -= s.charAt(i);
+            d += t.charAt(i);
+        }
+        d += t.charAt(s.length());
+        return (char) d;
+    }
